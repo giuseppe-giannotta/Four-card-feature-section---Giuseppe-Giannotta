@@ -58,7 +58,7 @@ header {
 }
 h1,
 header span {
-  font-size: 2.4rem;
+  font-size: clamp(2.4rem, 0.57vi + 2.211rem, 4.598rem);
   text-align: center;
 }
 
@@ -66,7 +66,7 @@ header span {
   color: var(--grigio_scuro);
 }
 header p {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 0.33vi + 1.376rem, 1.8rem);
   padding: 1.5rem 0;
   text-align: center;
 }
@@ -76,13 +76,13 @@ article {
   margin: 2.5rem 0;
 }
 article h2 {
-  font-size: 2.1rem;
+  font-size: clamp(2.1rem, 0.44vi + 1.934rem, 2.5rem);
   color: var(--grigio_scuro);
   font-weight: 600;
   margin-bottom: 1rem;
 }
 article span {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 0.22vi + 1.417rem, 1.7rem);
 }
 
 .card {
