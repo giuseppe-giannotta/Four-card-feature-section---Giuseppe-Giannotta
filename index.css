@@ -1,0 +1,157 @@
+/* ESTETICA GENERALE*/
+:root {
+  --rosso: hsl(0, 78%, 62%);
+  --celeste: hsl(180, 62%, 55%);
+  --arancione: hsl(34, 97%, 64%);
+  --blu: hsl(212, 86%, 64%);
+  --grigio_scuro: hsl(234, 12%, 34%);
+  --grigio_chiaro: hsl(212, 6%, 44%);
+  --bianco: hsl(0, 0%, 100%);
+}
+
+.poppins-200 {
+  font-weight: 200;
+}
+.poppins-400 {
+  font-weight: 400;
+}
+.poppins-600 {
+  font-weight: 600;
+}
+.container {
+  max-width: 80%;
+  margin: 2rem auto;
+}
+/*RESET INIZIALE*/
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  color: var(--grigio_chiaro);
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+img {
+  width: 6rem;
+}
+.image {
+  display: flex;
+  justify-content: end;
+  padding: 3rem 0;
+}
+/* HEADER*/
+header {
+  max-width: 51.8rem;
+  margin: 0 auto;
+}
+h1,
+header span {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+header span {
+  color: var(--grigio_scuro);
+}
+header p {
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+/*CARDS*/
+article {
+  margin: 2.5rem 0;
+}
+article h2 {
+  font-size: 2.1rem;
+  color: var(--grigio_scuro);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+article span {
+  font-size: 1.5rem;
+}
+
+.card {
+  padding: 3rem 1.5rem;
+  border-radius: 7px;
+  box-shadow: 0px 5px 15px -10px var(--grigio_scuro),
+    0px 3px 15px -10px var(--celeste);
+  max-width: 35rem;
+  margin: 3rem auto;
+}
+
+.card1 {
+  border-top: 3px solid var(--celeste);
+}
+.card2 {
+  border-top: 3px solid var(--rosso);
+}
+.card3 {
+  border-top: 3px solid var(--arancione);
+}
+.card4 {
+  border-top: 3px solid var(--blu);
+}
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
+
+@media (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "rosso rosso giallo giallo " " rosso rosso giallo giallo "
+      " celeste celeste blu blu  " " celeste celeste blu blu  ";
+    gap: 1rem;
+  }
+  .container {
+    max-width: 95%;
+  }
+  .card {
+    justify-self: center;
+  }
+  .card1 {
+    grid-area: celeste;
+  }
+  .card2 {
+    grid-area: rosso;
+  }
+  .card3 {
+    grid-area: giallo;
+  }
+  .card4 {
+    grid-area: blu;
+  }
+}
+
+@media (min-width: 1060px) {
+  main {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      ". . rosso rosso . ."
+      "celeste celeste rosso rosso blu blu"
+      "celeste celeste  giallo giallo blu blu"
+      ". . giallo giallo . .";
+  }
+}
